@@ -10,4 +10,4 @@ Things to do:
 
 In order to reindex your model, use:
 
- * bundle exec rake searchkick:reindex
+ * bundle exec rake searchkick:reindex CLASS=Post
