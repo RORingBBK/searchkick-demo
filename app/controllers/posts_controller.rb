@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   def index
     search = params[:query].present? ? params[:query] : nil
     @posts = if search
-      # Post.where("title LIKE ? OR description LIKE ?", "%#{search}", "%#{search}")
+      # Post.where("title LIKE ?", "%#{search}%")
       Post.search search
     else
       Post.all

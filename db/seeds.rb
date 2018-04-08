@@ -6,9 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-title_list = ["This is test", "Sorry", "Me and you", "Avengers review", "Do not make noise",
-              "Notebook", "Pastery", "Fall in coffee", "Rise of Titans", "React"]
+# title_list = ["This is test", "Sorry", "Me and you", "Avengers review", "Do not make noise",
+#               "Notebook", "Pastery", "Fall in coffee", "Rise of Titans", "React"]
 
-title_list.each_with_index do |title, index|
-  Post.create(title: title, year: 2018 + index)
+# title_list.each_with_index do |title, index|
+#   Post.create(title: title, year: 2018 + index)
+# end
+
+1000.times.each do |d|
+  Post.create(title: Faker::SiliconValley.character, description: Faker::SiliconValley.quote, app: Faker::SiliconValley.app)
 end
