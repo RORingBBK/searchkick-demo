@@ -1,24 +1,13 @@
-# README
+# Searchkick-demo
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application has the setup of searchkick gem and basic use of it.
 
-Things you may want to cover:
+Things to do:
 
-* Ruby version
+ * bundle install
 
-* System dependencies
+ * bundle exec rails server
 
-* Configuration
+In order to reindex your model, use:
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ * bundle exec rake searchkick:reindex
