@@ -1,0 +1,27 @@
+.container
+  .row
+    %p#notice= notice
+    %h1 Posts
+
+    = form_with url: posts_path, local: true, method: :get, class: 'form-inline' do |f|
+      .form-group
+        = f.text_field :query
+        = f.submit "Search", class: "btn btn-primary"
+
+    %table.table
+      %thead
+        %tr
+          %th Title
+          %th
+          %th
+          %th
+
+      %tbody
+        - @posts.each do |post|
+          %tr
+            %td= post.title
+            %td= link_to 'Show', post
+            %td= link_to 'Edit', edit_post_path(post)
+            %td= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' }
+    %br/
+    = link_to 'New Post', new_post_path
